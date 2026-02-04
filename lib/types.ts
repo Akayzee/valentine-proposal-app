@@ -14,6 +14,7 @@ export type ValentineConfig = {
     };
     second: {
       text: string;
+      subText: string;
       startText: string;
       nextBtn: string;
     };
@@ -54,6 +55,10 @@ export type ValentineConfig = {
     stopText: string;
     volume: number;
   };
+  image: {
+    imageUrl: string;
+    imageAltText: string;
+  };
 };
 
 export type Position = {
@@ -75,3 +80,7 @@ export type FloatingElement = {
 export type Yes = {
   onYes: () => void;
 };
+
+export interface MusicPlayerProps {
+  autoStart?: boolean;
+}

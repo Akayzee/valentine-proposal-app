@@ -2,8 +2,14 @@
 
 import { useRef, useState, useEffect, useCallback } from "react";
 import { CONFIG } from "@/lib/config";
+import { MusicPlayerProps } from "@/lib/types";
+const initialCondition = {
+  autoStart: false,
+};
 
-export default function MusicPlayer() {
+export default function MusicPlayer({
+  autoStart = initialCondition.autoStart,
+}: MusicPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -16,13 +22,13 @@ export default function MusicPlayer() {
     audio.volume = CONFIG.music.volume;
 
     // Attempt autoplay if enabled
-    if (CONFIG.music.autoplay) {
+    if (CONFIG.music.autoplay && autoStart) {
       audio
         .play()
         .then(() => setIsPlaying(true))
         .catch(() => setIsPlaying(false));
     }
-  }, []);
+  }, [autoStart]);
 
   // Toggle music playback
   const toggleMusic = useCallback(() => {

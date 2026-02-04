@@ -16,6 +16,7 @@ export const CONFIG: ValentineConfig = {
     },
     second: {
       text: "How much do you love me?",
+      subText: "drag the slider to set your love value",
       startText: "This much!",
       nextBtn: "Next ❤️",
     },
@@ -50,11 +51,18 @@ export const CONFIG: ValentineConfig = {
   },
   music: {
     enabled: true,
-    autoplay: false,
+    autoplay: true,
     musicUrl:
-      "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3",
+      "https://res.cloudinary.com/dwbgocfhp/video/upload/v1770209894/5c98-5ef8-4716-8677-584afae1e617_skj9ac.mp3",
     startText: "🎵 Play Music",
     stopText: "🔇 Stop Music",
     volume: 0.5,
   },
+  image: {
+    imageUrl:
+      "https://res.cloudinary.com/djrammvq6/image/upload/v1770188397/main-sample.png",
+    imageAltText: "Celebration image",
+  },
 };
+
+// https://res.cloudinary.com/dwbgocfhp/video/upload/v1770217090/5c98-5ef8-4716-8677-584afae1e617_mpatvq.mp3
