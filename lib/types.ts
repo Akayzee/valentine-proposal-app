@@ -54,6 +54,10 @@ export type ValentineConfig = {
     stopText: string;
     volume: number;
   };
+  image: {
+    imageUrl: string;
+    imageAltText: string;
+  };
 };
 
 export type Position = {

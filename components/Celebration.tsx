@@ -1,8 +1,19 @@
 import { CONFIG } from "@/lib/config";
+import Image from "next/image";
 
 export default function Celebration() {
   return (
     <div className="text-center animate-fade-in px-2">
+      <div className="relative mb-6">
+        <Image
+          src={CONFIG.image.imageUrl}
+          alt={CONFIG.image.imageAltText}
+          height={200}
+          width={200}
+          className="object-cover mx-auto rounded-lg sepia"
+        />
+      </div>
+
       <h2
         className="font-dancing text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4"
         style={{ color: CONFIG.colors.textColor }}

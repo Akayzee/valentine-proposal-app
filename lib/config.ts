@@ -57,4 +57,9 @@ export const CONFIG: ValentineConfig = {
     stopText: "🔇 Stop Music",
     volume: 0.5,
   },
+  image: {
+    imageUrl:
+      "https://res.cloudinary.com/djrammvq6/image/upload/v1770188397/main-sample.png",
+    imageAltText: "Celebration image",
+  },
 };
