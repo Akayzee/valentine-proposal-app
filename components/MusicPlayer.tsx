@@ -41,10 +41,10 @@ export default function MusicPlayer() {
   }, [isPlaying]);
 
   return (
-    <div className="mb-4">
+    <div className="mb-3 sm:mb-4">
       <button
         onClick={toggleMusic}
-        className="bg-gradient-to-r from-[#667eea] to-[#764ba2] border-none px-4 py-2 rounded-[20px] text-white text-sm cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95"
+        className="bg-gradient-to-r from-[#667eea] to-[#764ba2] border-none px-3 py-1.5 sm:px-4 sm:py-2 rounded-[20px] text-white text-xs sm:text-sm cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95"
         aria-label={isPlaying ? "Stop music" : "Play music"}
       >
         {isPlaying ? CONFIG.music.stopText : CONFIG.music.startText}

@@ -23,9 +23,13 @@ export default function Question3({ onYes }: Yes) {
     const maxHeight =
       typeof window !== "undefined" ? window.innerHeight - 50 : 0;
 
+    // Ensure position is within safe bounds (at least 10px from edges)
+    const minLeft = 10;
+    const minTop = 10;
+
     return {
-      left: `${Math.random() * maxWidth}px`,
-      top: `${Math.random() * maxHeight}px`,
+      left: `${Math.max(minLeft, Math.min(maxWidth - minLeft, Math.random() * maxWidth))}px`,
+      top: `${Math.max(minTop, Math.min(maxHeight - minTop, Math.random() * maxHeight))}px`,
     };
   }, []);
 
@@ -36,14 +40,14 @@ export default function Question3({ onYes }: Yes) {
   return (
     <div className="min-h-[200px]">
       <h2
-        className="font-poppins text-3xl mb-6 md:text-2xl sm:text-xl"
+        className="font-poppins text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-4 sm:mb-6 px-2"
         style={{ color: CONFIG.colors.textColor }}
       >
         {CONFIG.questions.third.text}
       </h2>
 
       <button
-        className="border-none px-5 py-2.5 mx-2.5 rounded-[20px] text-white text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 md:text-base sm:px-4 sm:py-2"
+        className="border-none px-4 py-2 sm:px-5 sm:py-2.5 mx-1 sm:mx-2.5 rounded-[20px] text-white text-base sm:text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
         style={baseButtonStyle}
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = CONFIG.colors.buttonHover;
@@ -58,7 +62,7 @@ export default function Question3({ onYes }: Yes) {
       </button>
 
       <button
-        className="border-none px-5 py-2.5 mx-2.5 rounded-[20px] text-white text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 md:text-base sm:px-4 sm:py-2"
+        className="border-none px-4 py-2 sm:px-5 sm:py-2.5 mx-1 sm:mx-2.5 rounded-[20px] text-white text-base sm:text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
         style={{
           ...baseButtonStyle,
           ...(noButtonPosition

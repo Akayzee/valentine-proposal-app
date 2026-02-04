@@ -30,15 +30,15 @@ export default function Question2({ onNext }: { onNext: () => void }) {
   return (
     <div className="min-h-[200px]">
       <h2
-        className="font-poppins text-3xl mb-6 md:text-2xl sm:text-xl"
+        className="font-poppins text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-4 sm:mb-6 px-2"
         style={{ color: CONFIG.colors.textColor }}
       >
         {CONFIG.questions.second.text}
       </h2>
 
-      <div className="relative w-full my-5 overflow-visible py-2.5">
+      <div className="relative w-full my-4 sm:my-5 overflow-visible py-2.5">
         <div
-          className="text-xl my-4 transition-all duration-300 flex justify-center items-center flex-wrap gap-2.5 md:text-lg sm:text-base"
+          className="text-base sm:text-lg lg:text-xl my-3 sm:my-4 transition-all duration-300 flex justify-center items-center flex-wrap gap-2 sm:gap-2.5 px-2"
           style={{ color: CONFIG.colors.textColor }}
         >
           <span>{CONFIG.questions.second.startText}</span>
@@ -49,7 +49,7 @@ export default function Question2({ onNext }: { onNext: () => void }) {
             {loveValue}%
           </span>
           {extraLoveMessage && (
-            <span className="inline-block font-bold animate-bounce-slow ml-2.5">
+            <span className="inline-block font-bold animate-bounce-slow ml-2 sm:ml-2.5 text-sm sm:text-base">
               {extraLoveMessage}
             </span>
           )}
@@ -67,7 +67,7 @@ export default function Question2({ onNext }: { onNext: () => void }) {
       </div>
 
       <button
-        className="border-none px-5 py-2.5 mx-2.5 rounded-[20px] text-white text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95 md:text-base sm:px-4 sm:py-2"
+        className="border-none px-4 py-2 sm:px-5 sm:py-2.5 mx-1 sm:mx-2.5 rounded-[20px] text-white text-base sm:text-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95"
         style={baseButtonStyle}
         onMouseEnter={(e) => {
           e.currentTarget.style.backgroundColor = CONFIG.colors.buttonHover;

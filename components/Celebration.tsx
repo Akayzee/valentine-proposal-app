@@ -2,17 +2,17 @@ import { CONFIG } from "@/lib/config";
 
 export default function Celebration() {
   return (
-    <div className="text-center animate-fade-in">
+    <div className="text-center animate-fade-in px-2">
       <h2
-        className="font-dancing text-5xl mb-4 md:text-4xl sm:text-3xl"
+        className="font-dancing text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4"
         style={{ color: CONFIG.colors.textColor }}
       >
         {CONFIG.celebration.title}
       </h2>
-      <p className="text-[1.3rem] my-4 text-[#333] md:text-xl sm:text-lg">
+      <p className="text-base sm:text-lg lg:text-[1.3rem] my-3 sm:my-4 text-[#333]">
         {CONFIG.celebration.message}
       </p>
-      <div className="text-5xl animate-bounce-slow md:text-4xl sm:text-3xl">
+      <div className="text-3xl sm:text-4xl lg:text-5xl animate-bounce-slow">
         {CONFIG.celebration.emojis}
       </div>
     </div>

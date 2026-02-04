@@ -71,7 +71,7 @@ export default function FloatingElements({
       {elements.map((element) => (
         <div
           key={element.id}
-          className="absolute text-4xl animate-float"
+          className="absolute text-2xl sm:text-3xl lg:text-4xl animate-float"
           style={element.style}
         >
           {element.emoji}
