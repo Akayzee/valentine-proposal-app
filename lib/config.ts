@@ -36,8 +36,8 @@ export const CONFIG: ValentineConfig = {
     emojis: "🎁💖🤗💝💋❤️💕",
   },
   colors: {
-    backgroundStart: "#ffafbd",
-    backgroundEnd: "#ffc3a0",
+    backgroundStart: "#7F55B1",
+    backgroundEnd: "#F49BAB",
     buttonBackground: "#ff6b6b",
     buttonHover: "#ff8787",
     textColor: "#ff4757",
