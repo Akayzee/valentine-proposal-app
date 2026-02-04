@@ -9,6 +9,7 @@ import Question2 from "@/components/Question2";
 import Question3 from "@/components/Question3";
 import Celebration from "@/components/Celebration";
 import ThemeProvider from "@/components/ThemeProvider";
+import Image from "next/image";
 
 const HomePage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
@@ -29,6 +30,16 @@ const HomePage = () => {
 
   return (
     <ThemeProvider>
+      <div className="fixed inset-0 w-full h-full -z-10 min-h-screen">
+        <Image
+          src="/images/bg-image.jpg"
+          alt="Background photo"
+          fill
+          priority
+          className="object-cover blur-xs"
+        />
+      </div>
+
       <div className="min-h-screen flex justify-center items-center overflow-x-hidden p-3 sm:p-5">
         <FloatingElements showExplosion={showCelebration} />
 

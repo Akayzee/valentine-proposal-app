@@ -14,6 +14,7 @@ export type ValentineConfig = {
     };
     second: {
       text: string;
+      subText: string;
       startText: string;
       nextBtn: string;
     };

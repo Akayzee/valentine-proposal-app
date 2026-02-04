@@ -30,11 +30,14 @@ export default function Question2({ onNext }: { onNext: () => void }) {
   return (
     <div className="min-h-[200px]">
       <h2
-        className="font-poppins text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-4 sm:mb-6 px-2"
+        className="font-poppins text-lg sm:text-xl lg:text-2xl xl:text-3xl mb-2 sm:mb-4 px-2"
         style={{ color: CONFIG.colors.textColor }}
       >
         {CONFIG.questions.second.text}
       </h2>
+      <p className="font-dancing text-md sm:text-lg lg:text-xl xl:text-2xl bg-gradient-to-r from-purple-600 to-red-400 bg-clip-text text-transparent mb-2 sm:mb-4 px-2">
+        {CONFIG.questions.second.subText}...
+      </p>
 
       <div className="relative w-full my-4 sm:my-5 overflow-visible py-2.5">
         <div

@@ -16,6 +16,7 @@ export const CONFIG: ValentineConfig = {
     },
     second: {
       text: "How much do you love me?",
+      subText: "drag the slider to set your love value",
       startText: "This much!",
       nextBtn: "Next ❤️",
     },
@@ -50,7 +51,7 @@ export const CONFIG: ValentineConfig = {
   },
   music: {
     enabled: true,
-    autoplay: false,
+    autoplay: true,
     musicUrl:
       "https://res.cloudinary.com/dwbgocfhp/video/upload/v1770209894/5c98-5ef8-4716-8677-584afae1e617_skj9ac.mp3",
     startText: "🎵 Play Music",
