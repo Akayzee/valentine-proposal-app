@@ -9,7 +9,7 @@ export const CONFIG: ValentineConfig = {
   },
   questions: {
     first: {
-      text: "Do you love me?",
+      text: "Tell me, do you love me?",
       yesBtn: "Yes",
       noBtn: "No",
       secretAnswer: "The right answer is Yes! ❤️",

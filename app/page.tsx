@@ -29,12 +29,14 @@ const HomePage = () => {
 
         <div className="flex flex-col gap-6 sm:gap-8 lg:gap-10 bg-white/90 p-5 sm:p-6 lg:p-8 rounded-[20px] shadow-[0_0_20px_rgba(0,0,0,0.1)] text-center w-full max-w-[95%] sm:max-w-[85%] md:max-w-[600px] lg:max-w-[500px] mx-auto relative z-10">
           {CONFIG.music.enabled && <MusicPlayer />}
-          <h1
-            className="font-dancing text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 lg:mb-8"
-            style={{ color: CONFIG.colors.textColor }}
-          >
-            My {CONFIG.valentineName},
-          </h1>
+          {currentQuestion === 1 && (
+            <h1
+              className="font-dancing text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6 lg:mb-8"
+              style={{ color: CONFIG.colors.textColor }}
+            >
+              My {CONFIG.valentineName},
+            </h1>
+          )}
 
           {!showCelebration && (
             <>
