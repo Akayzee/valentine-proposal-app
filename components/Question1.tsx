@@ -36,8 +36,8 @@ export default function Question1({ onNext }: Next) {
     const minTop = 10;
 
     return {
-      left: `${Math.max(minLeft, Math.min(maxWidth, Math.random() * maxWidth))}px`,
-      top: `${Math.max(minTop, Math.min(maxHeight, Math.random() * maxHeight))}px`,
+      left: `${Math.max(minLeft, Math.min(maxWidth - minLeft, Math.random() * maxWidth))}px`,
+      top: `${Math.max(minTop, Math.min(maxHeight - minTop, Math.random() * maxHeight))}px`,
     };
   }, []);
 
