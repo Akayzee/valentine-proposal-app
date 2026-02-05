@@ -42,7 +42,12 @@ export default function Question3({ onYes }: Yes) {
     // Trigger confetti explosion
     const duration = 3 * 1000;
     const animationEnd = Date.now() + duration;
-    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+    const defaults = {
+      startVelocity: 30, // Initial speed of confetti particles
+      spread: 360, // Full circle spread (360 degrees)
+      ticks: 60, // Number of animation frames
+      zIndex: 0, // Layer behind modal
+    };
 
     const randomInRange = (min: number, max: number) => {
       return Math.random() * (max - min) + min;

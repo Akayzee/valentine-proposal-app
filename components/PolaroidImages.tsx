@@ -3,6 +3,13 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+// Polaroid card dimensions
+const IMAGE_WIDTH = 120;
+const IMAGE_HEIGHT = 120;
+const POLAROID_PADDING = 8; // 2 * 4px (p-2)
+const CAPTION_HEIGHT = 24; // h-6
+const TOTAL_HEIGHT = IMAGE_HEIGHT + POLAROID_PADDING + CAPTION_HEIGHT;
+
 interface PolaroidImage {
   id: number;
   src: string;
@@ -29,8 +36,8 @@ export default function PolaroidImages({ show }: { show: boolean }) {
     const initialImages: PolaroidImage[] = wifeyImages.map((src, index) => ({
       id: index,
       src,
-      x: Math.random() * (window.innerWidth - 150),
-      y: Math.random() * (window.innerHeight - 200),
+      x: Math.random() * (window.innerWidth - IMAGE_WIDTH),
+      y: Math.random() * (window.innerHeight - TOTAL_HEIGHT),
       vx: (Math.random() - 0.5) * 3, // velocity x
       vy: (Math.random() - 0.5) * 3, // velocity y
       rotation: Math.random() * 20 - 10, // -10 to 10 degrees
@@ -48,17 +55,14 @@ export default function PolaroidImages({ show }: { show: boolean }) {
           let newVy = img.vy;
 
           // Bounce off edges
-          const imageWidth = 120;
-          const imageHeight = 150;
-
-          if (newX <= 0 || newX >= window.innerWidth - imageWidth) {
+          if (newX <= 0 || newX >= window.innerWidth - IMAGE_WIDTH) {
             newVx = -newVx;
-            newX = Math.max(0, Math.min(newX, window.innerWidth - imageWidth));
+            newX = Math.max(0, Math.min(newX, window.innerWidth - IMAGE_WIDTH));
           }
 
-          if (newY <= 0 || newY >= window.innerHeight - imageHeight) {
+          if (newY <= 0 || newY >= window.innerHeight - TOTAL_HEIGHT) {
             newVy = -newVy;
-            newY = Math.max(0, Math.min(newY, window.innerHeight - imageHeight));
+            newY = Math.max(0, Math.min(newY, window.innerHeight - TOTAL_HEIGHT));
           }
 
           return {
@@ -95,8 +99,8 @@ export default function PolaroidImages({ show }: { show: boolean }) {
             <Image
               src={img.src}
               alt={`Wifey ${img.id + 1}`}
-              width={120}
-              height={120}
+              width={IMAGE_WIDTH}
+              height={IMAGE_HEIGHT}
               className="object-cover"
             />
             <div className="h-6 bg-white"></div>
