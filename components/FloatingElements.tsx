@@ -45,7 +45,7 @@ export default function FloatingElements({
     if (showExplosion) {
       const explosionElements: FloatingElement[] = [];
 
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 20; i++) {
         const randomHeart =
           CONFIG.floatingEmojis.hearts[
             Math.floor(Math.random() * CONFIG.floatingEmojis.hearts.length)

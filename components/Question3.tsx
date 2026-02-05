@@ -68,7 +68,7 @@ export default function Question3({ onYes, onNext }: Yes & Next) {
         return clearInterval(interval);
       }
 
-      const particleCount = 50 * (timeLeft / duration);
+      const particleCount = 500 * (timeLeft / duration);
 
       // Fire confetti from random positions
       confetti({

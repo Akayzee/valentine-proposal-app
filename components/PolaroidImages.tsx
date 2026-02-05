@@ -29,8 +29,10 @@ export default function PolaroidImages({ show }: { show: boolean }) {
     // Initialize polaroid images with random positions and velocities
     const wifeyImages = [
       "/images/wifey/wifey1.jpg",
-      "/images/wifey/wifey2.jpg",
-      "/images/wifey/wifey3.jpg",
+      "/images/wifey/wifey5.jpg",
+      "/images/wifey/wifey6.jpg",
+      "/images/wifey/wifey4.jpg",
+      "/images/wifey/wifey7.jpg",
     ];
 
     const initialImages: PolaroidImage[] = wifeyImages.map((src, index) => ({
@@ -62,7 +64,10 @@ export default function PolaroidImages({ show }: { show: boolean }) {
 
           if (newY <= 0 || newY >= window.innerHeight - TOTAL_HEIGHT) {
             newVy = -newVy;
-            newY = Math.max(0, Math.min(newY, window.innerHeight - TOTAL_HEIGHT));
+            newY = Math.max(
+              0,
+              Math.min(newY, window.innerHeight - TOTAL_HEIGHT)
+            );
           }
 
           return {

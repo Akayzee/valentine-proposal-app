@@ -8,9 +8,7 @@ import Question1 from "@/components/Question1";
 import Question2 from "@/components/Question2";
 import Question3 from "@/components/Question3";
 import Celebration from "@/components/Celebration";
-import ThemeProvider from "@/components/ThemeProvider";
 import PolaroidImages from "@/components/PolaroidImages";
-import Image from "next/image";
 
 const HomePage = () => {
   const [currentQuestion, setCurrentQuestion] = useState(1);

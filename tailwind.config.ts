@@ -14,7 +14,7 @@ const config: Config = {
       },
       animation: {
         float: "float var(--float-duration, 15s) linear infinite",
-        "bounce-slow": "bounce 0.5s infinite",
+        "bounce-slow": "bounce 1.5s infinite",
         "pulse-slow": "pulse 1.5s infinite",
         "fade-in": "fadeIn 1s ease-in",
         "subtle-hint": "subtleHint 2s infinite alternate",
