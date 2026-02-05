@@ -3,6 +3,7 @@ import { Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 import { CONFIG } from "@/lib/config";
 import ThemeProvider from "@/components/ThemeProvider";
+import Image from "next/image";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -30,12 +31,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${dancingScript.variable} ${poppins.variable} font-poppins`}
-        style={{
-          // Original gradient background (commented out to fix background flash issue)
-          // background: `linear-gradient(135deg, ${CONFIG.colors.backgroundStart}, ${CONFIG.colors.backgroundEnd})`,
-          backgroundColor: "#f5f5f5", // Neutral color instead of gradient
-        }}
       >
+        <div className="fixed inset-0 w-full h-full -z-10 min-h-screen">
+          <Image
+            src="/images/bg-image.jpg"
+            alt="Background photo"
+            fill
+            priority
+            className="object-cover blur-xs"
+          />
+        </div>
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
