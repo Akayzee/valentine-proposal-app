@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Dancing_Script, Poppins } from "next/font/google";
 import "./globals.css";
 import { CONFIG } from "@/lib/config";
+import ThemeProvider from "@/components/ThemeProvider";
+import Image from "next/image";
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -28,12 +30,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dancingScript.variable} ${poppins.variable} font-poppins`}
-        style={{
-          background: `linear-gradient(135deg, ${CONFIG.colors.backgroundStart}, ${CONFIG.colors.backgroundEnd})`,
-        }}
+        className={`${dancingScript.variable} ${poppins.variable} font-poppins font-dancing`}
       >
-        {children}
+        <div className="fixed inset-0 w-full h-full -z-10 min-h-screen">
+          <Image
+            src="/images/bg-image.jpg"
+            alt=""
+            fill
+            priority
+            className="object-cover blur-xs"
+          />
+        </div>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );

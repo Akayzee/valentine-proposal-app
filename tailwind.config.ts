@@ -18,6 +18,8 @@ const config: Config = {
         "pulse-slow": "pulse 1.5s infinite",
         "fade-in": "fadeIn 1s ease-in",
         "subtle-hint": "subtleHint 2s infinite alternate",
+        "slide-in-up": "slideInUp 0.6s ease-out forwards",
+        "slide-in-up-delayed": "slideInUp 0.6s ease-out 0.1s forwards",
       },
       keyframes: {
         float: {
@@ -46,6 +48,16 @@ const config: Config = {
         subtleHint: {
           "0%": { opacity: "0.2" },
           "100%": { opacity: "0.5" },
+        },
+        slideInUp: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(30px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
       },
     },

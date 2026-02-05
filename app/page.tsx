@@ -18,6 +18,7 @@ const HomePage = () => {
   const [hasStarted, setHasStarted] = useState(false);
 
   const handleNextQuestion = () => {
+    if (currentQuestion === 3) return;
     setCurrentQuestion((prev) => prev + 1);
   };
 
@@ -30,17 +31,7 @@ const HomePage = () => {
   };
 
   return (
-    <ThemeProvider>
-      <div className="fixed inset-0 w-full h-full -z-10 min-h-screen">
-        <Image
-          src="/images/bg-image.jpg"
-          alt="Background photo"
-          fill
-          priority
-          className="object-cover blur-xs"
-        />
-      </div>
-
+    <>
       <div className="min-h-screen flex justify-center items-center overflow-x-hidden p-3 sm:p-5">
         <FloatingElements showExplosion={showCelebration} />
         <PolaroidImages show={showCelebration} />
@@ -82,7 +73,10 @@ const HomePage = () => {
                     <Question2 onNext={handleNextQuestion} />
                   )}
                   {currentQuestion === 3 && (
-                    <Question3 onYes={handleCelebration} />
+                    <Question3
+                      onYes={handleCelebration}
+                      onNext={handleNextQuestion}
+                    />
                   )}
                 </>
               )}
@@ -92,7 +86,7 @@ const HomePage = () => {
           )}
         </div>
       </div>
-    </ThemeProvider>
+    </>
   );
 };
 export default HomePage;
