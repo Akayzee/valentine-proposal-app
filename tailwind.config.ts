@@ -19,6 +19,7 @@ const config: Config = {
         "fade-in": "fadeIn 1s ease-in",
         "subtle-hint": "subtleHint 2s infinite alternate",
         "slide-in-up": "slideInUp 0.6s ease-out forwards",
+        "slide-in-up-delayed": "slideInUp 0.6s ease-out 0.1s forwards",
       },
       keyframes: {
         float: {

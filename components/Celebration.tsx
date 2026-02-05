@@ -14,7 +14,7 @@ export default function Celebration() {
         />
       </div>
 
-      <div className="animate-slide-in-up" style={{ animationDelay: "0.1s" }}>
+      <div className="animate-slide-in-up-delayed">
         <h2
           className="font-dancing text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4"
           style={{ color: CONFIG.colors.textColor }}
