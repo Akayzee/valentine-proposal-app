@@ -1,7 +1,7 @@
 import { ValentineConfig } from "./types";
 
 export const CONFIG: ValentineConfig = {
-  valentineName: "Brownie",
+  valentineName: "Ayoka",
   pageTitle: "The Ulitamte Love Test 💝",
   floatingEmojis: {
     hearts: ["❤️", "💖", "💝", "💗", "💓"],
@@ -60,7 +60,7 @@ export const CONFIG: ValentineConfig = {
   },
   image: {
     imageUrl:
-      "https://res.cloudinary.com/djrammvq6/image/upload/v1770188397/main-sample.png",
+      "https://res.cloudinary.com/dwbgocfhp/image/upload/v1770407027/IMG-20260206-WA0043_zervl3.jpg",
     imageAltText: "Celebration image",
   },
 };

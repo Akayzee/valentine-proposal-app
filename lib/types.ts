@@ -84,3 +84,5 @@ export type Yes = {
 export interface MusicPlayerProps {
   autoStart?: boolean;
 }
+
+export type PolaroidImages = string[];

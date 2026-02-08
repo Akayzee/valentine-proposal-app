@@ -1,5 +1,4 @@
 import { CONFIG } from "@/lib/config";
-import Image from "next/image";
 
 export default function Celebration() {
   return (

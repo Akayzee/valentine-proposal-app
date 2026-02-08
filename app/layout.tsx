@@ -30,13 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dancingScript.variable} ${poppins.variable} font-poppins font-dancing`}
+        className={`${dancingScript.variable} ${poppins.variable} font-dancing`}
       >
         <div className="fixed inset-0 w-full h-full -z-10 min-h-screen">
           <Image
-            src="/images/bg-image.jpg"
+            src={CONFIG.image.imageUrl}
             alt=""
-            fill
+            height={2560}
+            width={1440}
             priority
             className="object-cover blur-xs"
           />

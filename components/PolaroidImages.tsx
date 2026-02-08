@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { polaroidImages } from "@/lib/polaroid-images";
 
 // Polaroid card dimensions
 const IMAGE_WIDTH = 120;
@@ -27,13 +28,8 @@ export default function PolaroidImages({ show }: { show: boolean }) {
     if (!show) return;
 
     // Initialize polaroid images with random positions and velocities
-    const wifeyImages = [
-      "/images/wifey/wifey1.jpg",
-      "/images/wifey/wifey5.jpg",
-      "/images/wifey/wifey6.jpg",
-      "/images/wifey/wifey4.jpg",
-      "/images/wifey/wifey7.jpg",
-    ];
+    const wifeyImages = polaroidImages
+    
 
     const initialImages: PolaroidImage[] = wifeyImages.map((src, index) => ({
       id: index,
