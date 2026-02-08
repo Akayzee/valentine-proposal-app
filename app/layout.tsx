@@ -36,8 +36,7 @@ export default function RootLayout({
           <Image
             src={CONFIG.image.imageUrl}
             alt=""
-            height={2560}
-            width={1440}
+            fill
             priority
             className="object-cover blur-xs"
           />
