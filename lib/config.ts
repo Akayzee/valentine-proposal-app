@@ -60,7 +60,7 @@ export const CONFIG: ValentineConfig = {
   },
   image: {
     imageUrl:
-      "https://res.cloudinary.com/dwbgocfhp/image/upload/v1770407027/IMG-20260206-WA0043_zervl3.jpg",
+      "https://res.cloudinary.com/dwbgocfhp/image/upload/v1770544902/IMG-20260206-WA0041_c9kdhc.jpg",
     imageAltText: "Celebration image",
   },
 };
